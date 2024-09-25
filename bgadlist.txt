@@ -1,936 +1,165 @@
-! Network filters
-!
-! Block
-
-! Regex
-/^https?:\/\/cdn\.[a-z]{4,8}\.com\/app\.js$/$third-party,script,match-case
-/^https:\/\/[a-f0-9]{10}\.[a-f0-9]{10}\.com\/[a-f0-9]{32}\.js$/$third-party,script
-/^https:\/\/media\.mediadirectory\.net\/storage\/([a-f0-9]\/){3}[a-f0-9]{40}\/index\.html#aid=/$third-party,subdocument
-
-! Misc
-/wp-content/plugins/popup-press/js/pps_script.js$script,domain=bul-tv.com|tvmaniabg.com|gledaibgtv.com|iptv-bg.com
-/images/radio999bg/banners/*$image,domain=radio999bg.com|radio999.bg
-/images/radio999bg/cache/banner/*$image,domain=radio999bg.com|radio999.bg
-
-! Denyallow filters
-*$third-party,script,xmlhttprequest,domain=myonvideo.com,denyallow=cloudflare.com|cbox.ws|facebook.com|facebook.net|fbcdn.net|hcaptcha.com|google.com|gstatic.com|googleapis.com|jquery.com
-*$third-party,script,xmlhttprequest,domain=filmiplay.com,denyallow=disqus.com|disquscdn.com|fastlylb.net|cloudfront.net|google.com|gstatic.com
-*$third-party,script,xmlhttprequest,domain=filmi.club,denyallow=hcaptcha.com|facebook.com|facebook.net|fbcdn.net|cloudflare.com|jquery.com|hwcdn.net|cloudflareresearch.com|gstatic.com|google.com|googleapis.com
-
-! '||' filters
-||adwise.bg^$third-party
-||bimg.abv.bg^$~image
-||img.abv.bg^*/as.adwise.bg/
-||id24.bg/bans/
-||linker.bg^
-||reklama.wisdom.bg^
-||emag.bg/garez.php?
-||eadsrv.com^
-||frognews.bg^*/rekl.js$script
-||b1.alo.bg^
-||stats.jobs.bg^
-||stats2.jobs.bg^
-||espresso-reklam.eu^
-||dir.bg/js_myads.php?
-||dir.bg/js_ext.php?
-||static.dir.bg/trendo/$subdocument
-||netinfo.bg/abv/counters.html
-||a.actualno.com^
-||ads2native.com^
-||moreto.net^*-ads.php
-||mediapool.bg/assets/js/ads_deffinitions*.js$script
-||ping.contactpigeon.com/bi/bail/
-||laptop.bg/identity?
-||nixanbal.com/images/300_x_350.jpg$image
-||cdn1.efbet.com^$third-party,domain=~casinoefbet.com
-||burgasreklama.com/images/banners/$image
-||e-burgas.com/template/default/ajax/banner_display.php
-||adsys.insert.bg^
-||adserver.bg^
-||add.cross.bg^
-||easyads.bg^$third-party
-||adrain.check-system.online^
-||natsr.pro^
-||stz24.com/template/stz24/banner/$image
-||ads-bg.net^$third-party
-||zara-live.com/ad/$image
-||vbox7.com/aj/item/adwise?
-||winbetaffiliates.com^$third-party,domain=~winbet.bg
-||enovina.bg/upload/banners/$image
-||pronewsdobrich.bg/banners/
-||moreto.net/i/branding/$image
-||karlovo.tv/staticImages/ads/$image
-||otzvuk.bg/wp-content/uploads/reklami/$image
-||adhash.org^$third-party
-||automoto.bg/images/banners/$image
-||maritime.bg/ads/
-||botevgrad.com/uploads/ad/$image
-||jasmin.bg/wp-content/themes/Jasmin26/assets/i/partners/$image
-||adsy.mail.bg^
-||stats.icdsoft.com^
-||snickchangesolder.com^
-||affiliates.palmsbet.com^$third-party
-||divident.eu/uploads/banners/$image
-||az-jenata.bg/js/copyinject.js$script
-||poezia.ucoz.net/rtr/
-||blagoevgrad.eu/banners/$image
-||brat-bg.com/images/banners/$image
-||vivacom.bg/online/analytics/
-||androidbg.com/images/a/$image
-||invitrobg.com/wp-content/uploads/*/banner*$image
-||bg-voice.com/wp-content/themes/zox-news/js/clappr.ads.js$script
-||kotasport.com/wp-content/uploads/ads*$image
-||pahtvs.tech^
-||htagpa.tech^
-||pahthf.tech^
-||24zdrave.bg/Scripts/GemiusPrism.js$script
-||bgtourism.bg/wp-content/uploads/rkl*$image
-||portalsz.com/uploads/banners/$image
-||bglekari.bg/images/banners/$image
-||umgangrubbler.com^
-||temanews.com/img/banners/$image
-||iwoman.bg/pb.js$script
-||petszona.com/uf/banners/$image
-||pahtbt.tech^
-||bglov.com/js/banners.js$script
-||1001recepti.com/show_banner.php?
-||copypoison.com^$third-party
-||expert.bg/pb.js$script
-||pirinsko.com/upload/banners/$image
-||pirinsko.com/banners/$image
-||a.abv.bg^
-||xlrm-tech.com^
-||track.mediadirectory.net^
-||bia-bg.com/images/banner/$image
-||karlovopress.com/assets/img/banners/$image
-||adnet.bg^
-||vipoferta.bg/tracking/
-||rapolok.com^
-||lekar.bg/wp-content/uploads/banners/$image
-||spotsniper.ru^
-||svejo.net/assets/banners/$image
-||inbetpartners.com^$third-party,domain=~inbet.com|~inbetcasino.com
-||counter.search.bg^
-||skandal.bg/pic/banners/
-||adhash.bg^$third-party
-||lupa.bg/f/banners/$image
-||kazanlak.com/common/buss/adv-$image
-||dnevnik.bg/js/videojs/videojs.ads.min.js$script
-||cdn.economedia.bg/minj/*youtube.analytics.js$script
-||bgmaps.com/statistics/
-||profitshare.bg^$third-party
-||analytics.bluedottech.io^
-||adrain.bg^$third-party
-||bird.bg^*?mailoptin-ajax=track_optin_impression
-||picbg.net^*-banner.php
-||chervenkarton.com/images/banners/$image
-||gladen.bg/pixel/
-||radioantena.bg/videojs.ads.min.js$script
-||celebritybulk.com^
-||jatsekse.net^
-||zegrumse.net^
-||naisoops.net^
-||bulnews.bg/images/banners/
-||myonvideo.com^*&ads=
-||pdr.emag.bg^$ping
-||technodream.bg/pixel/
-||zetsr.com^
-||kupinauka.com/pixel/
-||visvitalis.bg/pixel/
-||lumupu.xyz^
-||chernomorie-bg.com/template/default/ajax/banner_display.php
-||yambolsport.net/reklami/$image
-||burevestnik.bg/banner$image
-||bans.zajenata.bg^
-||agronovinite.com/wp-content/uploads/minibanners/$image
-||alle.bg/a.html?t=adsenseblock$subdocument
-||agroplovdiv.bg/adro/
-||uppyads.com^
-||dobrudjabg.com/upload/banners/
-||dobrichonline.com/media/banners/
-||travelnews.bg/pic/banners/
-||hdvmyo.com^
-||zamunda.*/banners/
-||sesameaffiliates.bg^$third-party
-||bg7.eu/Banner/
-||tomorrowwillbehotmaybe.com^
-||sevlievo-online.com/images/canvas/ads/reklami/$image
-||dupnicanews.eu/images/banners/$image
-||autonews.bg/Files/Baners/
-||kolite.bg/banners/
-||novinite.bg/media/banners/
-||econ.bg/img/banners/$image
-||faragency.bg/pic/banners/
-||pariteni.bg/niads.html?$subdocument
-||pahtpw.tech^
-||glasnews.bg/data/banners/$image
-||werock.bg/images/publa/$image
-||uniconbg.com/uploads/source/ads/$image
-||goceto.com/images/banners/$image
-||filmi99.com/rtr/
-||startphoto.bg/banner/$image
-||zdrave.net/banner*/$image
-||pronewsdobrich.bg/?h=bannerfile&$image
-||gramofona.com/ads/loadbanner/
-||gramofona.com/assets/banners/$image
-||poligraff.net/uploads/banners/$image
-||lupa.bg/public/$subdocument
-||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect-rule=google-ima.js,domain=btvplus.bg
-||kircaalihaber.com^*uploads/banners/$image
-||plovdivmedia.bg/img/banner*$image
-||kvorum-silistra.info/images/banners/
-||portal-silistra.eu/images/banners/$image
-||burgasinfo.com/ajax/getbanners/
-||mirogled.com/storage/filemanager/files/*/*_banner_*/$image
-||konkurent.bg/pic/banners/$image
-||plant-protection.com/resources/banners/
-||plant-protection.com/assets/img/ads/$image
-||cssuvtbfeap.com^
-||news24-7.bg/uploads/blocks/$image
-
-! allow
-@@||id24.bg/bans/covid19icon.png$image
-@@||id24.bg/bans/sendnn.png$image
-@@||id24.bg/bans/googlealogo.png$image
-@@||id24.bg/bans/futontv*.png$image
-@@||flashnews.bg/wp-content/uploads/*/300x150_corona.png$image
-@@/adverts/*$image,domain=botevgrad.com
-@@/advertise-$image,domain=bgvakancia.com
-@@||brat-bg.com/images/Reklama/$image
-@@||player.bgestv.com/ad/api/popunder.js$script
-@@/wp-content/plugins/dh-anti-adblocker/*$~third-party,script
-@@||netinfocompany.bg/iframe_ads.php$subdocument
-@@||a.abv.bg/www/delivery/ck.php?$doc
-@@||1001idei.com/banners/$image
-@@||klukite.com/banners/$image
-@@||moreto.net/ads_userpics/$image
-@@||nu6i-bg-net.com^$generichide
-@@||player.nu6i-bg-net.com/ad/api/popunder.js$script
-@@||www.btv.bg^$generichide
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=dir.bg|pik.bg|offnews.bg|framar.bg
-@@||mamaninja.bg/images/logo-the-viking-seo-adwords.png$image
-@@||seir-sanduk.com/2022-ad-300x600-left.js#adstype=banner$script
-
-!
-! Element hiding, Cosmetic filtering & Sciptlets
-!
-! Hide
-
-! Generic
-~efbet.com,~casinoefbet.com,~betenemy.com,~nostrabet.com,~silentbet.com,~efirbet.com##[href^="https://cdn1.efbet.com/"]
-~efbet.com,~casinoefbet.com##[src^="https://cdn1.efbet.com/"]
-~winbet.bg,~winbetaffiliates.com,~betenemy.com,~nostrabet.com,~silentbet.com,~efirbet.com##[href^="https://record.winbetaffiliates."]
-~winbet.bg,~winbetaffiliates.com##[src^="https://record.winbetaffiliates."]
-~palmsbet.com,~betenemy.com,~nostrabet.com,~silentbet.com,~efirbet.com##[href^="https://www.palmsbet.com/affiliate/"]
-##.SC_TBlock
-##a[href^="https://track.mediadirectory.net/click?"]
-
-! Specific
-daskalo.com,souyovkov.com,pgt-pomorie.com,ou-zahari.com,ouvoynikov-pobeda.com,pgmet1.com,pgdevin.com,radichkovls-vidin.org,pgptlom.com,pget-harmanli.com,rio-vidin.org,ghp-pld.com,sou-vetovo.org,fsgdobrich.org,soukneja.org,ouvaptsarov.net,souroman.org,lomonosov-go.com,oustmihaylovski.org,ou72.org,sou-trastenik.com,soudevin.com,outsalapitsa.com,sou-prodanov.com,soumadan.org,vasillevskibelene.org,pgtdobrich.org,4ou-shishkov.eu,ouesv-vidin.org,svetii-kardjali.org,sourazlog.net,su-dm.info,sou73.bg,soumedkovec.com,pges-tg.com,dgkatunci.com,oubyalareka.org,oulovchanci.org,ousaparevabania.com,suyyovkov-tervel.bg,oustarareka.com,romanistika.org,dg-ablanica.com##div[style]:has(> a[href][style] + br + small[style] > a[href]:has-text(Как да премахнете тази реклама?))
-plovdiv24.bg,burgas24.bg,varna24.bg,ruse24.bg,blagoevgrad24.bg,sofia24.bg##body:style(background: none !important)
-plovdiv24.bg,burgas24.bg,varna24.bg,ruse24.bg,blagoevgrad24.bg,sofia24.bg###leftbrand
-plovdiv24.bg,burgas24.bg,varna24.bg,ruse24.bg,blagoevgrad24.bg,sofia24.bg###rightbrand
-frognews.bg##.world-area-ad
-frognews.bg##.health-ad-blk
-frognews.bg##.politics-area-ad
-frognews.bg##.top-news-area-ad
-frognews.bg##.underground-area-ad
-frognews.bg##.cat-middle-ad-center
-frognews.bg##.article-after-comments-ad
-frognews.bg##.inside-area-right-middle-ad
-frognews.bg##.article-after-text-ad
-frognews.bg##.article-before-donate-ads
-frognews.bg##.inside-area-right-top-ad
-frognews.bg##.topfrog-ads-blk-hl
-frognews.bg##.health-ads-blk
-frognews.bg##.business-ads
-petel.bg##.top-banner
-petel.bg##.left-out-banner
-petel.bg##.right-out-banner
-petel.bg##.ads-caption
-petel.bg###banner6
-alo.bg###adv_zone_index_dynamic
-alo.bg##div[data-src^="https://b1.alo.bg/"]
-alo.bg##.bnrframe
-miau.bg##.giwrp
-miau.bg##.gidm
-miau.bg##.gidd
-miau.bg##.gidb
-edna.bg##.edna-adContainer
-agroplovdiv.bg###logo-right
-agroplovdiv.bg##div[id^="widget_sp_image-"]
-gabrovonews.bg##.mvp-widget-home-head > .mvp-widget-home-title:has-text(Реклама)
-gabrovonews.bg##.banner
-gabrovonews.bg##.wp-block-image > a[href]:not([href^="https://www.gabrovonews.bg/"]) > img[src]
-gabrovonews.bg###mvp-leader-wrap:has(> a[href][target="_blank"] > img[class][src])
-nessebar-news.com##a[href^="http://nessebar-news.com/news2/wp-content/plugins/ml-adverts/"]
-yavka.net##.rek
-yavka.net##.bar_topadd:not(:has(.alert))
-yavka.net##[onclick^="adlink("]:remove-attr(onclick)
-zagoranews.bg##.bg-ad
-zagoranews.bg##[id^="ubm-banners-"]
-technews.bg##.baner_top
-technews.bg##.baner_after_post
-technews.bg##.baner_under_post
-banker.bg##.superbanner
-flashnews.bg##.rekl-bottom
-flashnews.bg##.flashnewsadzone.widget
-flashnews.bg##.widget_media_image
-flashnews.bg##.widget:has(> .textwidget > .fn-adspot-title)
-alfabass-tvfree.do.am##.ads-top-banner
-seirsanduk.*,seir-sanduk.*,glebul.com###banner
-seirsanduk.*,seir-sanduk.*,glebul.com###program p:has-text(/^Реклама:/)
-seirsanduk.com##+js(noeval-if, chp_ads_blocker_detector)
-bgvest.eu###b3p
-kriminalno.com##.float-right
-kriminalno.com##.azn
-stz24.com##.addv
-stz24.com##.widget > .inner:has(> .addv)
-smolyanpress.net##.logo > a[href]:not([href^="http://smolyanpress.net"]) > img[src]
-smolyanpress.net##.widget_buffercode_banner_upload_info
-zara-live.com##div.text-center:has(> h6:has-text(/^Реклама$/i))
-senzacia-bg.com##h2:has-text(РЕКЛАМА)
-senzacia-bg.com##center:has-text(РЕКЛАМА)
-bivol.bg##.widget.ai_widget > .widget-title:has-text(/^Реклама/i)
-bivol.bg##.code-block
-novavarna.net##.widgettitle:has-text(/^Реклама$/i)
-pik.bg##div[class^="banners_"]
-pik.bg##.connected-news > .title:has-text(препоръчано):upward(.connected-news)
-pro4eti.eu###b3p
-bg7.eu###b3p
-enovina.bg##.banner
-iskra.bg##.td-a-rec a[href]:not([href^="https://news.google.com/publications/CAAqBwgKMMqckgsws9WnAw"]) > img
-iskra.bg##.td-fix-index > a[href] > img
-dunavmost.com##div[class^="banner_"]
-obekti.bg##.banner
-obekti.bg##.banner + .info
-obekti.bg##+js(acs, adBlockerCookie)
-glashatai.com##.widget:has(> h3 + a[href] > img[src][style])
-clubz.bg##.banner-wrapper
-bgnewscom.eu##.widget_text:has(> .textwidget > script[src])
-slava.bg##.ad
-slava.bg##.left:has(> script[src])
-moreto.net###RightBrand
-moreto.net###LeftBrand
-moreto.net##a[href^="https://ad2.moreto.net/"]
-moreto.net##td[width="300"]:has(b:has-text(/^Реклама$/))
-bgmateriali.com##a[href="http://yankod.com"] > img
-burgasnovinite.bg##.widget:has(> .widget-content > :is(iframe[src^="https://b.grabo.bg/"], script[src^="https://pagead2.googlesyndication.com/"], script[src*=".etargetnet.com/"], script[src^="https://jsc.adskeeper.com/"], script[src^="https://secure.statcounter.com/"], .azn + script))
-bgvesti.net,haskovo.net##.wide-banner
-bgvesti.net,haskovo.net##.square-banner
-pbnovini.com##.gofollow
-otzvuk.bg##.gofollow
-otzvuk.bg##span.stream-title:has-text(/^Advertisement/)
-otzvuk.bg##div.adsbygoogle.Ad-Container.sidebar-ad:style(display: block !important)
-ejednevno.eu##center:has-text(/^Advertisement/)
-24plovdiv.bg##.margin-tb-10
-automoto.bg###home-banner
-pazarluk.com###automoto-banner
-pazarluk.com##.item-list:has(> .adsbygoogle)
-pazarluk.com##.suggestions-adsense
-1chas.bg##.logo-right-wrapper > a[href] > img[class="float-right"][src]
-zona98.com##.code-block
-zona98.com##.ai_widget:has(.code-block)
-lifebites.bg##div[style="margin:20px 0 10px;"]
-maritime.bg##.umw:has(> div[itemtype="https://schema.org/WPAdBlock"])
-maritime.bg,maritimefirst.com##.primary-sidebar-widget:has(div[itemtype="https://schema.org/WPAdBlock"])
-botevgrad.com##div[style]:has(> script[src^="https://reklama.botevgrad.com/"])
-botevgrad.com##.advert
-starozagorskinovini.com##.ubm_banners_rotation
-starozagorskinovini.com##.ubm_rotation_widget
-starozagorskinovini.com##.ubm_rotating_banner
-starozagorskinovini.com##.ubm_banner
-starozagorskinovini.com##.ubm_widget
-starozagorskinovini.com##.widget_text
-pogled.info##img[width="300"][height="100"]
-pogled.info##.bannerTop
-pogled.info##.adbox
-mail.bg##.banner
-mail.bg###main-billboard-spacer
-mail.bg###mail_ad
-mail.bg##.adsy-channel
-mail.bg##.banner_text_top
-radar.bg##[id^="ad-"]
-vtorifront.bg##[class^="ad-"]
-bg-gledai.live,bg-gledai.co,bg-gledai.video##img[width="728"][height="90"]
-bg-gledai.live,bg-gledai.co,bg-gledai.video##img[width="970"][height="250"]
-bg-gledai.live,bg-gledai.co,bg-gledai.video##.squarebanner
-bg-gledai.live,bg-gledai.co,bg-gledai.video##.smallbanner
-cdn.bg-gledai.live,cdn.bg-gledai.co,cdn.bg-gledai.video##+js(no-xhr-if, googletagservices.com)
-cdn.bg-gledai.live,cdn.bg-gledai.co,cdn.bg-gledai.video###adDetectorElm:style(display: block !important)
-bul-tv.com##.ban-head
-bul-tv.com##.banner-sticky
-gledaibgtv.com##.widebanner
-gledaibgtv.com##.squarebanner
-gledaibgtv.com##.smallbanner
-gledaibgtv.com##.banner-sticky
-onlinetv.bg##div[style*="width:307px;height:260px;"]
-bg.online-television.net##.paket-ads
-bg.online-television.net##.paket-ads-down
-bg.online-television.net##.terciheden
-bgvestnici.com##.mb-2:has(> .adsbygoogle)
-divident.eu##.banner
-az-jenata.bg##.banner
-hotarena.net##.smallHorizontalBanner
-hotarena.net##.bigHorizontalBanner
-hotarena.net##.rightBanner
-poezia.bg##img[width="468"][height="60"]
-poezia.bg##.vmainadsdvcl
-blagoevgrad.eu##.td-a-rec
-delo.bg##a[href^="https://samoletnibileti.check.bg/bg?utm_"]
-delo.bg##+js(set, wpsite_clickable_data, null)
-delo.bg##body:style(background-image: none !important)
-idei.bg##.banner-holder
-fun.9999999views.com##h3:has-text(/^Реклама$/)
-kazanlak-bg.info##div:has(> iframe[width="628"][height="230"])
-kazanlak-bg.info##div:has(> iframe[width="628"][height="130"])
-kazanlak-bg.info##div:has(> iframe[width="265"][height="265"])
-kazanlak-bg.info##div:has(> iframe[width="265"][height="250"])
-kazanlak-bg.info##div:has(> iframe[width="100%"][height="260"])
-zamunda.net,zamunda.ch##.clickads
-zamunda.net,zamunda.ch##[class^="unique-"]:has(> script[src*="advertere.zamunda."])
-zamunda.net,zamunda.ch##a[href="https://dmsbg.com/?r=z"]
-moiatabroshura.bg##[class^="banner"]
-moiatabroshura.bg##.col-desktop-5-banner
-www.androidbg.com##.widget_text > .cm-widget-title:has-text(Връзки):upward(.widget_text)
-www.androidbg.com##.widget_text:has(a[href] > img[src*="androidbg.com/images/a/"])
-bgizbori.org##div:has(> div > script[src*="googlesyndication.com"])
-invitrobg.com##.widget:has(> .widget-title:has-text(/^Реклама$/))
-action-newsbg.eu##.primary-footer .widget_text:has(> .textwidget > script[src])
-19min.bg##div[style]:has(> script[src^="https://ads.slava.bg/"])
-19min.bg##.adv
-kotasport.com##.td-all-devices
-infoz.bg##img[width="340"]
-nbp.bg##.tr_e3lan-widget
-nbp.bg##img[width="728"][height="90"]
-nbp.bg##div[style*="width:728px; height:90px;"]
-kalofer.bg##[id^="custom_html-"]:has(> h1:has-text(/^Реклама$/))
-actualno.com##[id^="banner_"]
-supichka.com##.banner_wrapper
-ezine.bg##.giwrp
-ezine.bg##.gidm
-ezine.bg##.gidb
-ezine.bg##.gidd
-ezine.bg##.rkl
-grad.bg##.gidb
-grad.bg##.gidd
-grad.bg##.giwrp
-grad.bg##.gidm
-focus-news.net##.banner
-focus-news.net##.banner-middle
-sanovnik.bg##.giwrp
-sanovnik.bg##.gidb
-sanovnik.bg##.gidd
-sanovnik.bg##.gidm
-sanovnik.bg##.rkl
-tvn.bg###container_ads
-tvn.bg##.td-all-devices
-flagman.bg##[class*="bannerRow"]
-vihrogon.bg##div[style*="text-align:center;"]:has-text(външна реклама)
-cross.bg##.adv
-capital.bg##.banner-box
-capital.bg##.advertising
-bgtourism.bg##.wppopups-whole
-bgtourism.bg##div[style*="width: 300px; height: 250px;"]
-bgtourism.bg##div[style*="width: 1020px; height: 120px;"]
-bgtourism.bg##div[style*="width: 300px; height: 450px;"]
-bgtourism.bg##.td-fix-index
-portalsz.com##.banner
-portalsz.com##.section-title:has-text(/^Реклама$/)
-www.abv.bg##.rightBanner
-www.abv.bg##.leftBanner
-www.abv.bg##.abv-Banner
-bglekari.bg##.banneritem
-temanews.com##a[href*="banners.php?banners_id="]
-novinibg.eu##.primary-footer .widget_text:has(> .textwidget > script[src])
-bulgarianhistory.org##h4:has-text(/^Реклама$/)
-bulgarianhistory.org##.td-a-rec
-hunter.bg##.ban300x250
-bglov.com##[class^="banner-"]
-bglov.com##[id^="banner_"]
-lapichki.com##td[height="260px"]
-matematika.bg##.ads
-gotvach.bg##.rkl
-gotvach.bg##.giwrp
-gotvach.bg##.gidm
-gotvach.bg##.gidd
-gotvach.bg##.gidb
-gotvach.bg##.gids
-cookwithasmile.com##.item-isotope:has(.post-media-body > script[src*="pagead2.googlesyndication.com"])
-yankod.com##.actual_ad
-pirinsko.com##.slidingBanners
-expert.bg##.mega-board
-expert.bg##.links-ads
-novinite.bg##.banner640
-bukvi.bg###top-banner
-bukvi.bg##.side:has(> div:has-text(/^Реклама$/))
-bukvi.bg##[id^=reklama]
-topbg.org##.widget:has(> div:has-text(/^Реклама$/))
-artday.bg##a[href="http://www.creativeeurope.bg"] > img
-artday.bg##a[href^="https://heikotera.com?utm_"] > img
-football24.bg##div[style]:has(> [src^="https://cdn1.efbet.com/"])
-football24.bg##.widget:has(> div > iframe[src^="https://cdn1.efbet.com/"])
-football24.bg###affcontainer
-prosveshtenieto.com##.widget:has(> h2:has-text(/^Реклама$/i))
-prosveshtenieto.com##[id^="prosv-"]
-hiddentruth.site##.widget:has(> a[href^="https://accounts.binance.com/bg/register?ref="])
-hiddentruth.site##.widget:has(> div > script[src*="etargetnet.com"],script[src*="eadsrv.com"],script[src*="pagead2.googlesyndication.com"])
-hiddentruth.site##[id^="hidde-"]
-bgtv.club##.col-sm-12:has(> .row > script[src*="pagead2.googlesyndication.com"])
-pero.bg##.ezclpok
-pero.bg##img[width="300"][height="250"]
-signal.bg##[id^=signal-]:has-text(Реклама)
-unison.bg##.widget-title:has-text(/^Реклама$/)
-cosmos.1.bg##.bd-container-inner > div.bd-tagstyles:has(> h4:has-text(/^Реклами/i))
-economic.bg##.plakat
-bg-mamma.com##.ad-cont
-pariteni.bg##.wrap-banner
-kliuki.bg,kliuki.net,kliuki.ws##.textwidget:has(script[src*="eadsrv.com"], script[src*="etargetnet.com"])
-kliuki.bg,kliuki.net,kliuki.ws##a[href="http://bit.ly/1EQF6HG"]
-zvezden.com##h3.widget-title:has-text(/^Реклама$/)
-digital.bg##.banner-holder
-bmm.bike##.gofollow
-bmm.bike##.widget .widget-title:has-text(/^Реклама$/):upward(.widget)
-fitnesblog.com##a[href="http://www.fitneshrani.com"][id="background-link"]
-fitnesblog.com##a[href="http://www.fitneshrani.com"] > img
-afera.bg##.textwidget > p:has(> a[href^="https://record.winbetaffiliates.com/"])
-avtora.com##.bannerClickHandler
-bpost.bg##[id^="bay-"]
-bia-bg.com##.tags:has(> .banner_wrap)
-bia-bg.com##.bottom_banners_wrap
-informiraise.us##.widget:has(> .textwidget > script[src*="pagead2.googlesyndication.com"],script[src*="waust.at"])
-ifilmi.net##.content:has(script[src*="//pagead2.googlesyndication.com/"])
-data.bg###bannertop_new
-nenovinite.com##.ad
-razkritia.com##.textwidget:has(script[src*="eadsrv.com"], script[src*="etargetnet.com"])
-razkritia.com##a[href="http://bit.ly/1EQF6HG"]
-potv.bg##.mb-4.col-lg-auto:has(> div > div > div > .adsbygoogle):first-of-type
-cinemabg.club##+js(acs, document.querySelectorAll, popMagic)
-coreni.net##.widget-title:has-text(/^Реклама$/)
-vicove.top##div.text-center:has(> script[src*="pagead2.googlesyndication.com"])
-vicove.top##.card:has(> .card-body > script[src*="pagead2.googlesyndication.com"])
-arenabg.com##div[id^="spot-"]
-arenabg.com##.row > .text-center > a[href^="http"]:not([href^="https://arenabg.com/"])
-arenabg.com##.row:has(> .col-md-3 > a[href="https://fvpn.com"])
-arenabg.com##:matches-path(/help) .card > .card-header > h2:has-text(/^Приятели|Friends$/i):upward(.card)
-opoznai.bg##a[href^="https://grabo.bg/vinetki/?affid="]
-opoznai.bg###b340x100
-bgtop.net##div[style="width:300px;height:600px;"]
-bgtop.net##div[style="width:300px;height:250px;"]
-dariknews.bg##.responsive-banner
-dariknews.bg##.banner-wrapper-common
-kakda.org##.widget:has(.widget-title:has-text(/^Реклама$/))
-lekar.bg##div[style*="width:320px; height:90px;"]
-lekar.bg##div[style*="width:336px; height:280px;"]
-omed.bg##.oto-adv-text
-svejo.net##.banner
-blitz.bg##.widget-title:has-text(/^РЕКЛАМА$/)
-blitz.bg##.ad-container
-glasove.com##.ads
-dsport.bg##.ads
-dsport.bg##.ads-ggl
-dsport.bg##.paid-banner
-dsport.bg##.logo8888[href*="?aff_id="]
-strelanews.com##.elementor-widget-image
-nixanbal.com##img[width="300"][height="250"]
-nixanbal.com##img[width="300"][height="350"]
-filmi.club##+js(nowoif)
-filmi.club##.mobile_ads
-filmi.club##.top_a
-filmi.club###module1:has(> div[style="padding: 10px;"] > script[src])
-myonvideo.com###ads_side_eta
-myonvideo.com##.content_box_left:has([src^="https://myonvideo.com/"][src*="&ads="], [src*="ads.exdynsrv.com"], [src*="celebritybulk.com"], [src*="etargetnet.com"], [src*="clksite.com"], #ad_inline_900_head)
-myonvideo.com##.l_panel:has(> [src^="https://myonvideo.com/"][src*="&ads="], [src*="ads.exdynsrv.com"], [src*="etargetnet.com"])
-myonvideo.com##.content_box_left:has(> h3:has-text(/^Реклама$/))
-myonvideo.com###advrs
-myonvideo.com##+js(nowoif)
-epicenter.bg##.div_kare_r:matches-css(width: 300px):has(> a[href]:not([href^="/author/"]) > img[style="padding-top:10px;"])
-player.bgestv.com##+js(aopr, BetterJsPop)
-player.bgestv.com##a[onclick="openAuc();"]
-offroad-bulgaria.com##div[id^="widget_"]:has(a[href^="https://www.autodoc.bg/"], a[href^="https://gumi.avtochastionline24.bg/"], a[href^="https://www.euavtochasti.bg/"])
-bgjourney.com##p:has-text(/^РЕКЛАМА$/)
-telegraph.bg##.banner
-dir.bg##.article-banners
-skandal.bg##.banner
-hotnews.bg##.banner__wrapper
-skafeto.com##[id^="skafe-"]
-lupa.bg##.banner-holder-new
-brat-bg.com##.camera_wrap
-brat-bg.com##.banneritem
-kazanlak.com##.bussadvert
-kazanlak.com##.bussadvert + .clrn10
-kazanlak.com##.bussadvert + .clrn10 + .horline
-kazanlak.com##.bi-inpage-horads
-par4eta.com##[id^="media_image-"]:has(> a[href] > img[src])
-dnevnik.bg##.banner-box
-dnevnik.bg##.banner
-dnevnik.bg##.module:has(> .smodule > .banner-box)
-odit.info###b300
-odit.info###b728
-odit.info###b468
-karieri.bg##.ad-unit-tags
-regal.bg##.ban
-regal.bg###topBanRow
-regal.bg##.banner468x60
-digitalk.bg##.advertising
-digitalk.bg##.banner-box
-novinite24.eu##div[style="width:100%; height:600px;"]:has(> script[src*="pagead2.googlesyndication.com"])
-duma.com###frsNews_banners
-bstv.bg##.banner > a[href]:not([href^="https://bstv.bg/"])
-zakazanlak.bg##img[alt="Ad"]
-ams.bg###leaderboard
-24novini.bg,bgsport.bg,spravka.bg,jiloto.com,timeart.bg,farmar.bg,mediafax.bg,24info.bg,d7-news.com##.td-a-rec
-bremenna.bg##.main-box:has(> h3[class]:has-text(/^Реклама$/))
-mediapool.bg##.banner
-mediapool.bg##.c-header-banner-wrapper
-webcafe.bg##.banner
-eurocom.bg##.col-12:has(> script + div[class] > strong:has-text(/^ADS$/))
-marica.bg##.ads-container
-marica.bg##.ad:not(:has(.widget.currency))
-bubolechko.com##.widget:has(> .textwidget > script[src*="pagead2.googlesyndication.com"])
-informiran.net##.widget > .widget-title:has-text(/промоция:/i)
-informiran.net##.widget:has(> .widget-title:has-text(/^реклама$/i))
-informiran.net##center,div[class][style]:has(> script[src*="ads.httpool.com"],script[src*="pagead2.googlesyndication.com"])
-informiran.net##p:has-text(/^There is no ads to display, Please add some$/i)
-bgspomen.com##center:has-text(/^РЕКЛАМА$/)
-lifebg.net,lifebg.eu###main_content [class$="-widget"][id^="text-"]
-lifebg.net,lifebg.eu##div[style="  width:100%; height:280px; margin-bottom:20px;"]
-poezia.bg##+js(set, uShowAdBanner, noopFunc)
-bg-gledai.com##div[style]:has(> div > script[src*="bidvertiser.com"])
-intrigi.bg##.td-a-rec
-carmarket.bg##.banner
-chervenkarton.com##.custom:has(> p[style] > a[href] > img[src^="/images/banners/"])
-chervenkarton.com##.nx-youtubebox:has(iframe[src^="https://www.youtube-nocookie.com/embed/IBg233JNrlo?"])
-bulnews.bg##.ad-cont:not(:has(> .search-container))
-bulnews.bg##.banner
-vgames.bg###banner300x250d
-vgames.bg###bannerBox
-vgames.bg###bannerBG
-vmusic.bg###banner
-vcards.bg###banner
-kultura.bg##.td-a-rec
-7sport.net###randomBanner
-spodeli.com##.mb-2.col-lg-3:has(> div[class] > div[class="b300"] > script[src*="pagead2.googlesyndication.com"])
-vicovete.bg##.dbox
-vicove.info##.rounded.mb-3:has(> script[src*="pagead2.googlesyndication.com"])
-bgtv-online.com##+js(aeld, load, FF_MainFunc)
-infomreja.bg##.topBanners
-novini.bg##.--banner:has(> [id^="div-gpt-ad"])
-laf.bg##.artvert
-laf.bg##.artbot
-laf.bg##.g-comments
-laf.bg##.embed
-nbox.bg##.td-a-rec
-narod.bg##.yiqr
-bg-dnes.tv###imCel9_01
-newsone.bg##.td-a-rec
-plevenpress.com##.code-block:has(> script[src^="https://pagead2.googlesyndication.com/"])
-signal.bg##.jeg_block_heading:has(> h3:has-text(/^РЕКЛАМА$/))
-zona666.com##.widget:has(> .textwidget > script[src^="https://pagead2.googlesyndication.com/"])
-zona666.com##.widget:has(> .textwidget > script[src*="//eadsrv.com/"])
-1minuta.com##.admania_widgettit:has(> h3[class]:has-text(/^Спонсорирано$/))
-72chasa.com##.admania_widgettit:has(> h3[class]:has-text(/^Спонсорирано$/))
-netvesti.com##img[width="300"][height="250"]
-zamunda.info##.widget_text:has(> .textwidget > :is(script[src*="pagead2.googlesyndication.com/"], script[src*="//geniusdexchange.com/"]))
-zamunda.info##.opinion-ad
-eurochicago.com##.widget_text:has(> h2[class]:has-text(/^Реклама$/i))
-nauka.bg##div[class][style]:has(> b:has-text(/^РЕКЛАМА:$/))
-namoreto.bg##.td-a-rec
-namoreto.bg##[id^="namor-"]
-namoreto.bg##a[href]:not([href^="https://namoreto.bg/"]) > img[src][width]:upward(.wpb_text_column, .td_block_wrap, .widget_text)
-kaksepishe.com##.shad
-kaksepishe.com##.widget_media_image
-teenproblem.net##.art_advert
-vsi4kifilmi.com##.Footer > .Container > a[href][target="_blank"]
-yambolsport.net##.banner
-yambolsport.net###menu-footer > .menu-item > a[href]:not([href^="https://www.yambolsport.net/"])
-yambolsport.net##h2[class="title"]:has-text(С подкрепата на:)
-yambolsport.net###widget_text:has(> h3[class="title"]:has-text(Сакарела))
-fbet.bg##div.adsbygoogle.Ad-Container.sidebar-ad:style(display: block !important)
-qkifilmi.com,onlain-filmi.com###movie_ad
-qkifilmi.com,onlain-filmi.com##.selected:has-text(/^Реклама$/)
-qkifilmi.com,onlain-filmi.com###banner_300x250
-qkifilmi.com,onlain-filmi.com###place_links
-filmi.link##.banner-top
-filmi.link##.select-area
-trendynews.bg###evado-banner
-trendynews.bg###credissimo-banners
-trendynews.bg###creativex
-trendynews.bg##.gofollow
-btvplus.bg##.bweb-gpt
-player.nu6i-bg-net.com##+js(aopr, BetterJsPop)
-player.nu6i-bg-net.com##a[onclick="openAuc();"]
-tvmaniabg.com##div[style]:has(> div[align="center"] > script[src*="//bdv.bidvertiser.com/"])
-btv.bg##.title-ad
-btv.bg##.is-advertisement
-sv-news.com,bgnew.info##.widget_text:has(> h3[class="widgettitle"]:has-text(/^Спонсорирани връзки:$/))
-sv-news.com,bgnew.info##.widget_text:has(> .textwidget > script[src*="//pagead2.googlesyndication.com/"])
-burevestnik.bg##.sidebar-inset:has(> h6[class]:has-text(/^Реклама|Препоръчано$/))
-burevestnik.bg##div[style]:has(> .section-md div.heading-divider > h2:has-text(/^Реклама$/))
-forgottenbulgaria.com##.sidebar-widget:has(> .widget-head > h4.title:has-text(/^Реклама$/i))
-radio999bg.com,radio999.bg##h4.titles:has-text(/^Реклама$/i)
-svobodnabulgaria.eu##.twp-ad-section
-svobodnabulgaria.eu##.widget_media_image
-vratovrazka.bg##.td-a-rec
-apteka-optima.com##[class^="commercial-wrap-home-"]
-apteka-optima.com##.commercial-wrap
-apteka-optima.com##.listing-commercial-wrap
-zajenata.bg##.shop_box:has(> #right_t_banner)
-agronovinite.com##.myownadvert
-agronovinite.com##.ubm_banners_rotation
-agronovinite.com##.widget_text:has(> .textwidget > a[href][target="_blank"]:not([href^="https://agronovinite.com/"]) > img[src])
-lex.bg##.banner-box
-alle.bg##.wstad
-alle.bg##.allebg-ads
-hapche.bg##.advertising-label
-inews.bg##.rightContentBox:has(> .newHeading > h3:has-text(/^Наши партньори$/i))
-novini247.com##.banner
-novini247.com##div[style="height:270px;"]:has(> .adsbygoogle)
-novini247.com##a[href^="https://promomall.bg/?novini247"]
-istinata.net##.widget_text:has(> [class$="-title"]:has-text(/^Реклама$/i))
-nariba.com##[id^="div-gpt-ad"]:upward(div[style*="height:250px"][style*="width:"])
-nariba.com##.box:has(> .box-title:has-text(/Реклама$/i))
-nariba.com##.ads
-ezine.nariba.com##.widget:has(> h3:has-text(/^Реклама$/i))
-ezine.nariba.com###mts_ad_widget
-karlovopress.com##.widget:has(img[src^="assets/img/banners/"])
-novapress.today##a[href] > img[src][width="728"][height="90"]
-mignews.info##.onecolumn a[href][target="_blank"]:not([href^="https://mignews.info"]):not([href^="https://www.mignews.info"]):not([href^="https://twitter.com/"]) > img[src]
-auto-data.net##.ad970nm
-ekspresso.bg##.td-a-rec:not(:has(a[href^="https://ekspresso.bg"]))
-vecherno.com##.td-a-rec
-retro.bg##.BannersUnderArticle
-retro.bg##.banner-adv-1
-tiendeo.bg##div[data-testid^="div-gpt-ad"]
-tiendeo.bg##div[data-testid^="div-gpt-ad"]:upward(#header-standard-container)
-silistranews.net##.textwidget:has(> a[href]:not([href^="https://silistranews.net/"]) > img[src])
-silistranews.net##.marketing-area
-utroruse.com##.widget:has(h3:has-text(Реклама))
-utroruse.com##.widget:has(> .cwidget > .text-center > a[href] > img[src$="/sesame.gif"])
-utroruse.com##.widget:has(> .cwidget > .text-center > div[style] script[src^="https://pagead2.googlesyndication.com"])
-utroruse.com###news_ad
-dobrudjabg.com##.widget_goodlayers-1-1-banner-widget
-novinivarna.com,dobrichonline.com###partners
-novinivarna.com##div[style]:has(> iframe[src^="https://www.dobrichonline.com/media/banners/"])
-haskovo.info##a[href] > img[width="728"][height="90"]
-haskovo.info##a[href="http://www.radiometronom.com/"][target="_blank"]:has(img[src])
-sakarnews.info##.banner
-sakarnews.info##.widget:has(> h3:has-text(/^Реклама$/i))
-knews.bg##.widget_text:has(> div > h3:has-text(/^Партньори$/i))
-knews.bg##.elementor-widget-container:has(> a[href]:not([href^="https://knews.bg/"]) > img[src])
-travelnews.bg##.banner
-travelnews.bg##.hidbanner
-stzagora.net##.standard-ad
-stzagora.net##.videohead:has(> .videotitle:has-text(/^Реклама$/i))
-rousse.info##.gofollow
-rousse.info##.widget:has(> .widget-header > .widget-title:has-text(/^(VIP )?Профили$/i))
-zarata.info##.entry-content > p:has-text(/^\[ad id=/)
-zarata.info##.text-adv
-zarata.info##.entry-content .code-block:has(> a[href]:not([href^="https://zarata.info"]) > img[src])
-dnes.bg##.natives-title
-dnes.bg##.natives
-manifesto.bg##.right_reklama
-manifesto.bg##.rt-block .title:has-text(/^Реклама$/i)
-manifesto.bg##.bannergroup
-manifesto.bg##.front_right_banner
-framar.bg##.banner-box
-framar.bg##.bnr
-argumenti.bg##.widget_thbadsingle
-argumenti.bg##a[href="http://paconsulting.bg/"] > img[src]
-novsport.com##+js(refresh-defuser)
-tribunaplovdiv.bg##.stream-item-above-header
-tribunaplovdiv.bg##a[href] > img[width="300"][height="250"]
-tribunaplovdiv.bg##+js(set, SGPB_POPUP_PARAMS, {})
-tribunaplovdiv.bg##div.adsbygoogle.Ad-Container.sidebar-ad:style(display: block !important)
-textove.com###sidebar_banner
-temasport.com##a[href="https://7sport.net/palmsbet/"] > img[src]
-temasport.com##a[href="https://betenemy.com/"] > img[src]
-bedenbogat.com##.widget:has(> .fbt-sep-title > .title:has-text(/^Реклама$/i))
-abcnews.bg##.banner
-vchas.net##.widget_text
-vchas.net###xrel
-zagora.bg##.baner
-zagora.bg##aside > .row:has(> .text-right > span:has-text(/^Реклама$/i))
-themainline.top##div[style="  width:100%; height:280px; margin-top:20px;"]
-prekrasna.bg##aside > .widget.widget_text
-politikata.net##center:has(> [id^="SC_TBlock"] ~ script[src^="https://adrain.check-system.online/"])
-newsbg.eu##img[alt="Header AD Image"]
-newsbg.eu##img[width="728"][height="90"]
-sevlievo-online.com##.banner
-sevlievo-online.com##.cont-adv-block
-blagoevgrad-news.com##.penci-banner-box
-blagoevgrad-news.com##.penci-widget-sidebar.widget_media_image
-blagoevgrad-news.com##.widget_text:has(> .textwidget > script[src^="https://pagead2.googlesyndication.com/"])
-zovnews.com##.widget_media_image
-zovnews.com##.widget_text > .widget-title:has-text(/^Реклама$/i)
-zovnews.com##img[width="728"][height="90"]
-delnik.net##.widget_media_image > img
-dupnicanews.eu##.bannergroup
-elhovo.news##.widget_text:has(> .widget-title:has-text(/^Реклама$/i))
-montana24.net##.td-a-rec
-autonews.bg###osnban
-autonews.bg###prods-cntv.hide :is([src^="Files/Baners/"], #etarget-hb-wrap, ins.adsbygoogle):upward(#prods-cntv.hide)
-troyanexpress.com##.container-wrapper.widget:has(> .widget-title:has-text(/^Реклама$/i))
-troyanexpress.com###menu-top
-troyanpress.com##.wpb_wrapper a[href] > img[width="1200"][height="200"]
-troyanpress.com##.widget:has(> .section-heading > .h-text:has-text(/^Реклама$/i))
-ranica.bg##.ranicarekl
-e-vestnik.bg##.video_title:has-text(/Реклама/i)
-econ.bg##.staticBanner
-econ.bg##.betBanner
-econ.bg##.banner
-jenite.bg##.newOffers
-programata.tv###banner2Column
-olaybg.com##.td-a-rec
-24shumen.com##.td-a-rec
-inra.bg##+js(noeval-if, chp_ads_blocker_detector)
-faragency.bg##.banner
-maritime.news##.td-a-rec
-manager.bg##.central-banner
-manager.bg##.advertorial-holder
-beroe.bg##.video-block-container:style(background-image: none !important)
-cdn.gledaitv.live##+js(no-xhr-if, googletagservices.com)
-cdn.gledaitv.live###adDetectorElm:style(display: block !important)
-agri.bg##.megaboard
-tractor.bg##.banner
-tsarevo.info##.footer-friends
-tsarevo.info##.td-a-rec
-tsarevo.info##.td-header-sp-rec
-tsarevo.info##+js(rmnt, script, aba_detector)
-burgasnews.com##.td-a-rec
-burgasnews.com##.wpb_single_image:not(:has(a[href^="https://bgtop.net"]))
-burgasnews.com##body.td-animation-stack-type0:remove-class(td-animation-stack-type0)
-chestno.bg##.elementor-widget-image-box
-betenemy.com,nostrabet.com,silentbet.com,efirbet.com##+js(nostif, show_adblocker)
-betenemy.com,nostrabet.com,silentbet.com,efirbet.com##.topheadbnr
-boec.com##.widget_media_image
-flashscore.bg##.boxOverContent__banner
-flashscore.bg##.detailLeaderboard
-sportlive.bg##.links-ads
-sportlive.bg##.mega-board:style(min-height: 0px !important)
-bball.bg##.td-a-rec
-werock.bg###baner2
-werock.bg###partners
-werock.bg###main:style(padding-top: 0px !important; margin-top: 0px !important;)
-toppresa.com##.adv-image
-toppresa.com##.adv-image + p > img
-toppresa.com##.widget_media_image
-infomax.bg##div[data-ai]
-infomax.bg##+js(acs, profitshare_id)
-goceto.com##img[alt~="banner"]
-wmg.bg,news.bg,money.bg,lifestyle.bg,topsport.bg##html.async-hide:style(opacity: 1 !important;)
-news.bg,money.bg,lifestyle.bg,topsport.bg,infostock.bg,webcafe.bg,chr.bg,mamamia.bg,kaldata.com,fakti.bg##div[class][style^="width: 1px; height: 1px; position: absolute; left: -10000px; top:"]:style(display: block !important;)
-filmi99.com##.mvi-images:empty
-filmi99.com##.mvi-images:has(script[src*="//filmi99.com/rtr/"]:only-child)
-chernomorie-bg.com##.horizontal-banner
-chernomorie-bg.com,e-burgas.com##.reklama-kvadrati
-novinarsko.eu##.widget_text
-dnesbulgaria.com##.banner-promotions-wrapper
-dnesbulgaria.com##.banner_wrapper
-olx.bg##div[data-testid="qa-advert-slot"]
-zdrave.net##.boxPartBanner
-zdrave.net##.bannSelect
-smolyaninfo.com##.banner-image
-smolyaninfo.com##.header_bottom_right
-smolyaninfo.com##.single_page_content + img[href="https://mihalkovo.com/bg/"]
-visitdobrich.bg##.widget_media_image
-agrodobrich.bg##:is(.wpb_wrapper, .widget_text) a[target="_blank"] > :is(img, iframe)
-show.bg##.gkpc
-smolyannews.com##:not(.ads) > .ad
-smolyannews.com##.bodyad
-gramofona.com##.banner-wrap
-poligraff.net##img[data-src^="https://www.poligraff.net/uploads/banners/"]
-interesnifakti.eu##.widget_media_video
-interesnifakti.eu##.widget_block
-interesnifakti.eu##.widget_media_image
-zapadno.com##.widget_sp_image
-rodopi24.blogspot.com##.adbanner
-rodopi24.blogspot.com##.widget > .widget-content > a[href]:not([href*="rodopi24."]):not([href*="24rodopi."]) > img
-rodopi24.blogspot.com##.widget > .widget-content > img
-newslife.bg##.elementor-widget-image
-3e-news.net##.block
-webstage.bg##.banner
-webstage.bg##.adv
-topactualno.com##div[style="float: none; margin:15px 0 15px 0; text-align:center;"]
-topactualno.com##.td-a-rec:not(:has(a[href^="https://www.facebook.com/TOPaktualno"]))
-varnaonline.eu##:is(.wpb_wrapper, .primary-sidebar) > .widget_text
-themainline.top,lifebg.net,lifebg.eu,bgvest.eu,pro4eti.eu,vchas.net,news7.eu##+js(rmnt, script, jQuery('body').click()
-vidin-online.com###gk_banner3
-targovishtenews.net##.marketing-area
-targovishtenews.net##.widget_text > .textwidget > a[href] > img
-targovishtenews.net##.widget_nav_menu:has(> .menu-priyateli-container)
-stroiinfo.com##.round-banner
-tvstz.com##.widget_media_image
-ardanews.info##.shailan_banner_widget
-avantage.bg##.sticky-sidebar > .avant-widget
-avantage.bg##.banner_wrapper
-provaton.bg###sidebar .widget_text:has(> .textwidget img)
-provaton.bg###sidebar .widget_media_video
-7dnibulgaria.bg##.gofollow
-7dnibulgaria.bg##.bt_banner
-filmisub.cc##+js(acs, document.readyState, adsBlocked)
-тв-програма.bg###banner300250
-тв-програма.bg##.banner620
-plovdiv-online.com##.wpb_single_image
-kvorum-silistra.info##.add
-kvorum-silistra.info##video:has(> source[src^="https://www.kvorum-silistra.info/images/banners/"])
-gabarko.eu##.clean-gallery-side-widget.gabar-widget
-gabarko.eu##div.gabar-after-content
-smolyandnes.com##.banneritem
-tribune.bg,lifeonline.bg,financialtribune.bg##.google_adds
-sravni.bg##.google-adsense-bilboard
-bulnews.com##.widget_links.widget
-bulnews.net##.col-sm-12:has(> .row > script[src^="//pagead2.googlesyndication.com/"])
-vbox7downloader.com##.banner
-bairak.bg##div[itemtype="https://schema.org/WPAdBlock"]
-skandalno.net##.widget_text:has(a[href] > img)
-skandalno.net##.td-post-content > div[style]:first-child > a[href] > img
-napos2000.com##div.col:has(> div[id^="napos-"])
-napos2000.com##.napos-widget
-drumivdumi.com##.bookingaff
-drumivdumi.com##.ad-inside3
-tvshumen.bg##.mg-widget .mg-wid-title:has-text(Реклама):upward(.mg-widget)
-konkurent.bg##.banner
-ekip7.bg##.widget_media_image:not(:has(> a[href*="ekip7.bg/"]))
-ekip7.bg##.widget_text:not(:has(div[data-href="https://www.facebook.com/vestnik.ekip7"]))
-plant-protection.com##div.widget:has(:is(.banner-container, a[href] > img[src*="/assets/img/ads/"]))
-play.nova.bg##+js(no-xhr-if, pagead2.googlesyndication.com)
-ekatte.com###ajax_ad:has(#ekatte > a[href])
-ekatte.com###ad
-bgdnes.bg##.rek
-bgdnes.bg##div[style="height: 1000px;"]:has(> .rek)
-news24-7.bg##.bn-content
-otgovora.com##.single-title ~ .textwidget a[href]
-varnanovini.bg##.banner-promotions-wrapper
-varnanovini.bg##.widget_media_image
-tvdobrich.com##.widget_media_image
-btv.bg,btvsport.bg,btvnovinite.bg##+js(set, branDetective, {})
-www.gstatic.com
-ad.kubiserves.icu
-entitlements.jwplayer.com
-wa.wtg-ads.com
-yt3.ggpht.com
-i.ytimg.com
-pubads.g.doubleclick.net
-prd.jwpltx.com
-img.2performant.com
-bam.nr-data.net
-! allow
-plovdiv24.bg,burgas24.bg,varna24.bg,ruse24.bg,blagoevgrad24.bg,sofia24.bg#@##adbox
-stz24.com#@#.weather_ad
-botevgrad.com#@#.adverts
-botevgrad.com#@#.advert-title
-fun.9999999views.com#@#.bottomad
-kotasport.com#@#.td-a-rec
-novinivarna.com,dobrichonline.com#@#.ad-block
-novinivarna.com,dobrichonline.com#@#.ad-title
-novinivarna.com,dobrichonline.com#@#.ad-description
-novinivarna.com,dobrichonline.com#@##ads-header
-kotelnews.com#@#.sidebaradbox
-obqvi.marica.bg#@#.ads-title
-tractor.bg#@#.adverts
-betenemy.com,nostrabet.com,silentbet.com,efirbet.com#@#.ad-content
-betenemy.com,nostrabet.com,silentbet.com,efirbet.com#@##reklama
-dobrotoliubie.com#@#.e3lan
-tvdobrich.com#@#.widget-ad
-tvdobrich.com#@#.ad-widget
+adwise.bg
+bimg.abv.bg
+img.abv.bg
+id24.bg
+linker.bg
+reklama.wisdom.bg
+emag.bg
+eadsrv.com
+frognews.bg
+b1.alo.bg
+stats.jobs.bg
+stats2.jobs.bg
+espresso-reklam.eu
+dir.bg
+static.dir.bg
+netinfo.bg
+a.actualno.com
+ads2native.com
+moreto.net
+mediapool.bg
+ping.contactpigeon.com
+laptop.bg
+nixanbal.com
+cdn1.efbet.com
+burgasreklama.com
+e-burgas.com
+adsys.insert.bg
+adserver.bg
+add.cross.bg
+easyads.bg
+adrain.check-system.online
+natsr.pro
+stz24.com
+ads-bg.net
+zara-live.com
+vbox7.com
+winbetaffiliates.com
+enovina.bg
+pronewsdobrich.bg
+moreto.net
+karlovo.tv
+otzvuk.bg
+adhash.org
+automoto.bg
+maritime.bg
+botevgrad.com
+jasmin.bg
+adsy.mail.bg
+stats.icdsoft.com
+snickchangesolder.com
+affiliates.palmsbet.com
+divident.eu
+az-jenata.bg
+poezia.ucoz.net
+blagoevgrad.eu
+brat-bg.com
+vivacom.bg
+androidbg.com
+invitrobg.com
+bg-voice.com
+kotasport.com
+pahtvs.tech
+htagpa.tech
+pahthf.tech
+24zdrave.bg
+bgtourism.bg
+portalsz.com
+bglekari.bg
+umgangrubbler.com
+temanews.com
+iwoman.bg
+petszona.com
+pahtbt.tech
+bglov.com
+1001recepti.com
+copypoison.com
+expert.bg
+pirinsko.com
+a.abv.bg
+xlrm-tech.com
+track.mediadirectory.net
+bia-bg.com
+karlovopress.com
+adnet.bg
+vipoferta.bg
+rapolok.com
+lekar.bg
+spotsniper.ru
+svejo.net
+inbetpartners.com
+counter.search.bg
+skandal.bg
+adhash.bg
+lupa.bg
+kazanlak.com
+dnevnik.bg
+cdn.economedia.bg
+bgmaps.com
+profitshare.bg
+analytics.bluedottech.io
+adrain.bg
+bird.bg
+picbg.net
+chervenkarton.com
+gladen.bg
+radioantena.bg
+celebritybulk.com
+jatsekse.net
+zegrumse.net
+naisoops.net
+bulnews.bg
+myonvideo.com
+pdr.emag.bg
+technodream.bg
+zetsr.com
+kupinauka.com
+visvitalis.bg
+lumupu.xyz
+chernomorie-bg.com
+yambolsport.net
+burevestnik.bg
+bans.zajenata.bg
+agronovinite.com
+alle.bg
+agroplovdiv.bg
+uppyads.com
+dobrudjabg.com
+dobrichonline.com
+travelnews.bg
+hdvmyo.com
+zamunda.net
+sesameaffiliates.bg
+bg7.eu
+tomorrowwillbehotmaybe.com
+sevlievo-online.com
+dupnicanews.eu
+autonews.bg
+kolite.bg
+novinite.bg
+econ.bg
+faragency.bg
+pariteni.bg
+pahtpw.tech
+glasnews.bg
+werock.bg
+uniconbg.com
+goceto.com
+filmi99.com
+startphoto.bg
+zdrave.net
+pronewsdobrich.bg
+gramofona.com
+poligraff.net
+lupa.bg
+imasdk.googleapis.com
+kircaalihaber.com
+plovdivmedia.bg
+kvorum-silistra.info
+portal-silistra.eu
+burgasinfo.com
+mirogled.com
+konkurent.bg
+plant-protection.com
+cssuvtbfeap.com
+news24-7.bg
