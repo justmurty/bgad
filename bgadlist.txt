@@ -1022,9 +1022,6 @@ ad.kubiserves.icu
 entitlements.jwplayer.com
 wa.wtg-ads.com
 yt3.ggpht.com
-
-
-
 !
 !--- Whitelist rules ---!
 @@/advert-$domain=advert-advance.com
