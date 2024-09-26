@@ -1,164 +1,289 @@
+0.0.0.0 ad-bg-host.com
+0.0.0.0 ad.bg
+0.0.0.0 ad.bgmarket.com
+0.0.0.0 adbulgarian.bg
+0.0.0.0 adcampaignbg.bg
+0.0.0.0 adnetbg.bg
+0.0.0.0 adnetbulgaria.bg
+0.0.0.0 adnetworkbg.com
+0.0.0.0 adnetworkbulgaria.bg
+0.0.0.0 ads.bgm.bg
+0.0.0.0 ads.bgmedia.bg
+0.0.0.0 ads.bgnetwork.bg
+0.0.0.0 adsbgtrack.com
+0.0.0.0 adsbul.bg
+0.0.0.0 adsbulgaria.bg
+0.0.0.0 adsensebg.bg
+0.0.0.0 adsensebulgaria.bg
+0.0.0.0 adserve.bg
+0.0.0.0 adserver.bg
+0.0.0.0 adservingbg.com
+0.0.0.0 adsmarketing.bg
+0.0.0.0 adtrack.bg
+0.0.0.0 adtrackbgnetwork.bg
+0.0.0.0 adtrackerbulgaria.bg
+0.0.0.0 adtrackers.bg
+0.0.0.0 adv.bg
+0.0.0.0 adv.bg
+0.0.0.0 advertbg.bg
+0.0.0.0 advertbulgaria.com
+0.0.0.0 adverttrackerbg.bg
+0.0.0.0 adz.bg
+0.0.0.0 baner.bg
+0.0.0.0 banneradnetbg.bg
+0.0.0.0 bannerbg.bg
+0.0.0.0 bannerbulgaria.bg
+0.0.0.0 bannernetwork.bg
+0.0.0.0 bannertrackbg.bg
+0.0.0.0 bg-ad.com
+0.0.0.0 bg-adnet.bg
+0.0.0.0 bg-ads-tracker.com
+0.0.0.0 bg-adsense.com
+0.0.0.0 bg-banner.com
+0.0.0.0 bg-marketingads.com
+0.0.0.0 bg-reklama.bg
+0.0.0.0 bg-targetads.com
+0.0.0.0 bgadcampaign.bg
+0.0.0.0 bgadhost.com
+0.0.0.0 bgadnetwork.bg
+0.0.0.0 bgads.bg
+0.0.0.0 bgadsense.bg
+0.0.0.0 bgadserve.com
+0.0.0.0 bgadspromo.bg
+0.0.0.0 bgadtrackingnet.bg
+0.0.0.0 bgadvert.bg
+0.0.0.0 bganalytics.bg
+0.0.0.0 bgdspnetwork.bg
+0.0.0.0 bgmarketads.bg
+0.0.0.0 bgmarketadtracker.com
+0.0.0.0 bgmarketadvert.com
+0.0.0.0 bgmarketing.bg
+0.0.0.0 bgmarketingtrack.com
+0.0.0.0 bgpromotracker.com
+0.0.0.0 bgreklam-ads.bg
+0.0.0.0 bgreklam.bg
+0.0.0.0 bgreklama.bg
+0.0.0.0 bgreklamat.com
+0.0.0.0 bgreklamnetwork.com
+0.0.0.0 bgrtbtracker.com
+0.0.0.0 bgtrack.bg
+0.0.0.0 bgtrackadvert.bg
+0.0.0.0 bgtrackers.bg
+0.0.0.0 bgtrackers.com
+0.0.0.0 bgtracknet.bg
+0.0.0.0 bgtrackpromo.bg
+0.0.0.0 bgwebtracker.com
+0.0.0.0 bul-adnetwork.com
+0.0.0.0 bulads.bg
+0.0.0.0 buladsense.com
+0.0.0.0 buladtracker.com
+0.0.0.0 bulgar-adnet.bg
+0.0.0.0 bulgaradnetwork.bg
+0.0.0.0 bulgarads.com
+0.0.0.0 bulgaria-marketing.com
+0.0.0.0 bulgariaads.bg
+0.0.0.0 bulgariadsp.bg
+0.0.0.0 bulgarian-ads.bg
+0.0.0.0 bulgarian-adsense.com
+0.0.0.0 bulgarianadsnet.com
+0.0.0.0 bulgarianadtracker.com
+0.0.0.0 bulgarianmarketads.bg
+0.0.0.0 bulgarianreklama.com
+0.0.0.0 bulgariantracker.bg
+0.0.0.0 bulgariapromo.bg
+0.0.0.0 bulgariatracker.com
+0.0.0.0 bulgariatrackers.com
+0.0.0.0 bulgariawebads.com
+0.0.0.0 bulgartrack.bg
+0.0.0.0 bultracking.bg
+0.0.0.0 marketadtrack.bg
+0.0.0.0 marketbg-ads.com
+0.0.0.0 marketbgadvert.bg
+0.0.0.0 markettrackbg.bg
+0.0.0.0 mediaads.bg
+0.0.0.0 mediaadsnetwork.bg
+0.0.0.0 mediareklam.bg
+0.0.0.0 mediatrackbg.com
+0.0.0.0 onlineads.bg
+0.0.0.0 onlineadsbulgaria.bg
+0.0.0.0 onlineadsbulgaria.bg
+0.0.0.0 onlinebgads.bg
+0.0.0.0 reklama.bgnetwork.bg
+0.0.0.0 reklamanetworkbg.bg
+0.0.0.0 reklamaonline.bg
+0.0.0.0 reklamaserverbg.com
+0.0.0.0 reklamatarget.bg
+0.0.0.0 reklambg.bg
+0.0.0.0 reklamenbg.bg
+0.0.0.0 reklamenmarket.bg
+0.0.0.0 reklami.bg
+0.0.0.0 reklamite.bg
+0.0.0.0 reklamybg.com
+0.0.0.0 stats.bgtracker.bg
+0.0.0.0 trackads.bg
+0.0.0.0 trackerbg.com
+0.0.0.0 tracking.bg
+0.0.0.0 trackingreklama.bg
+0.0.0.0 tracknetbulgaria.bg
+1001recepti.com
+24zdrave.bg
+a.abv.bg
+a.actualno.com
+add.cross.bg
+adhash.bg
+adhash.org
+adnet.bg
+adrain.bg
+adrain.check-system.online
+ads-bg.net
+ads2native.com
+adserver.bg
+adsy.mail.bg
+adsys.insert.bg
 adwise.bg
-bimg.abv.bg
-img.abv.bg
-id24.bg
-linker.bg
-reklama.wisdom.bg
-emag.bg
-eadsrv.com
-frognews.bg
+affiliates.palmsbet.com
+agronovinite.com
+agroplovdiv.bg
+alle.bg
+analytics.bluedottech.io
+androidbg.com
+automoto.bg
+autonews.bg
+az-jenata.bg
 b1.alo.bg
+bans.zajenata.bg
+bg-voice.com
+bg7.eu
+bglekari.bg
+bglov.com
+bgmaps.com
+bgtourism.bg
+bia-bg.com
+bimg.abv.bg
+bird.bg
+blagoevgrad.eu
+botevgrad.com
+brat-bg.com
+bulnews.bg
+burevestnik.bg
+burgasinfo.com
+burgasreklama.com
+cdn.economedia.bg
+cdn1.efbet.com
+celebritybulk.com
+chernomorie-bg.com
+chervenkarton.com
+copypoison.com
+counter.search.bg
+cssuvtbfeap.com
+dir.bg
+divident.eu
+dnevnik.bg
+dobrichonline.com
+dobrudjabg.com
+dupnicanews.eu
+e-burgas.com
+eadsrv.com
+easyads.bg
+econ.bg
+emag.bg
+enovina.bg
+espresso-reklam.eu
+expert.bg
+faragency.bg
+filmi99.com
+frognews.bg
+gladen.bg
+glasnews.bg
+goceto.com
+gramofona.com
+hdvmyo.com
+htagpa.tech
+id24.bg
+imasdk.googleapis.com
+img.abv.bg
+inbetpartners.com
+invitrobg.com
+iwoman.bg
+jasmin.bg
+jatsekse.net
+karlovo.tv
+karlovopress.com
+kazanlak.com
+kircaalihaber.com
+kolite.bg
+konkurent.bg
+kotasport.com
+kupinauka.com
+kvorum-silistra.info
+laptop.bg
+lekar.bg
+linker.bg
+lumupu.xyz
+lupa.bg
+lupa.bg
+maritime.bg
+mediapool.bg
+mirogled.com
+moreto.net
+myonvideo.com
+naisoops.net
+natsr.pro
+netinfo.bg
+news24-7.bg
+nixanbal.com
+novinite.bg
+otzvuk.bg
+pahtbt.tech
+pahthf.tech
+pahtpw.tech
+pahtvs.tech
+pariteni.bg
+pdr.emag.bg
+petszona.com
+picbg.net
+ping.contactpigeon.com
+pirinsko.com
+plant-protection.com
+plovdivmedia.bg
+poezia.ucoz.net
+poligraff.net
+portal-silistra.eu
+portalsz.com
+profitshare.bg
+pronewsdobrich.bg
+radioantena.bg
+rapolok.com
+reklama.wisdom.bg
+sesameaffiliates.bg
+sevlievo-online.com
+skandal.bg
+snickchangesolder.com
+spotsniper.ru
+startphoto.bg
+static.dir.bg
+stats.icdsoft.com
 stats.jobs.bg
 stats2.jobs.bg
-espresso-reklam.eu
-dir.bg
-static.dir.bg
-netinfo.bg
-a.actualno.com
-ads2native.com
-moreto.net
-mediapool.bg
-ping.contactpigeon.com
-laptop.bg
-nixanbal.com
-cdn1.efbet.com
-burgasreklama.com
-e-burgas.com
-adsys.insert.bg
-adserver.bg
-add.cross.bg
-easyads.bg
-adrain.check-system.online
-natsr.pro
 stz24.com
-ads-bg.net
-zara-live.com
-vbox7.com
-winbetaffiliates.com
-enovina.bg
-pronewsdobrich.bg
-moreto.net
-karlovo.tv
-otzvuk.bg
-adhash.org
-automoto.bg
-maritime.bg
-botevgrad.com
-jasmin.bg
-adsy.mail.bg
-stats.icdsoft.com
-snickchangesolder.com
-affiliates.palmsbet.com
-divident.eu
-az-jenata.bg
-poezia.ucoz.net
-blagoevgrad.eu
-brat-bg.com
-vivacom.bg
-androidbg.com
-invitrobg.com
-bg-voice.com
-kotasport.com
-pahtvs.tech
-htagpa.tech
-pahthf.tech
-24zdrave.bg
-bgtourism.bg
-portalsz.com
-bglekari.bg
-umgangrubbler.com
-temanews.com
-iwoman.bg
-petszona.com
-pahtbt.tech
-bglov.com
-1001recepti.com
-copypoison.com
-expert.bg
-pirinsko.com
-a.abv.bg
-xlrm-tech.com
-track.mediadirectory.net
-bia-bg.com
-karlovopress.com
-adnet.bg
-vipoferta.bg
-rapolok.com
-lekar.bg
-spotsniper.ru
 svejo.net
-inbetpartners.com
-counter.search.bg
-skandal.bg
-adhash.bg
-lupa.bg
-kazanlak.com
-dnevnik.bg
-cdn.economedia.bg
-bgmaps.com
-profitshare.bg
-analytics.bluedottech.io
-adrain.bg
-bird.bg
-picbg.net
-chervenkarton.com
-gladen.bg
-radioantena.bg
-celebritybulk.com
-jatsekse.net
-zegrumse.net
-naisoops.net
-bulnews.bg
-myonvideo.com
-pdr.emag.bg
 technodream.bg
-zetsr.com
-kupinauka.com
-visvitalis.bg
-lumupu.xyz
-chernomorie-bg.com
-yambolsport.net
-burevestnik.bg
-bans.zajenata.bg
-agronovinite.com
-alle.bg
-agroplovdiv.bg
-uppyads.com
-dobrudjabg.com
-dobrichonline.com
-travelnews.bg
-hdvmyo.com
-sesameaffiliates.bg
-bg7.eu
+temanews.com
 tomorrowwillbehotmaybe.com
-sevlievo-online.com
-dupnicanews.eu
-autonews.bg
-kolite.bg
-novinite.bg
-econ.bg
-faragency.bg
-pariteni.bg
-pahtpw.tech
-glasnews.bg
-werock.bg
+track.mediadirectory.net
+travelnews.bg
+umgangrubbler.com
 uniconbg.com
-goceto.com
-filmi99.com
-startphoto.bg
+uppyads.com
+vbox7.com
+vipoferta.bg
+visvitalis.bg
+vivacom.bg
+werock.bg
+winbetaffiliates.com
+xlrm-tech.com
+yambolsport.net
+zara-live.com
 zdrave.net
-pronewsdobrich.bg
-gramofona.com
-poligraff.net
-lupa.bg
-imasdk.googleapis.com
-kircaalihaber.com
-plovdivmedia.bg
-kvorum-silistra.info
-portal-silistra.eu
-burgasinfo.com
-mirogled.com
-konkurent.bg
-plant-protection.com
-cssuvtbfeap.com
-news24-7.bg
+zegrumse.net
+zetsr.com
