@@ -344,3 +344,7 @@ sportal.bg
 0.0.0.0 advertere.zamunda.net
 0.0.0.0 ads.garga.biz
 0.0.0.0 sportal.bg
+banners.zamunda.net
+adserver.zamunda.net
+ads2.zamunda.net
+ads3.zamunda.net
