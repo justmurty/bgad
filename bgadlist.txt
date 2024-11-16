@@ -24,7 +24,6 @@
 0.0.0.0 adtrackerbulgaria.bg
 0.0.0.0 adtrackers.bg
 0.0.0.0 adv.bg
-0.0.0.0 adv.bg
 0.0.0.0 advertbg.bg
 0.0.0.0 advertbulgaria.com
 0.0.0.0 adverttrackerbg.bg
@@ -105,7 +104,6 @@
 0.0.0.0 mediareklam.bg
 0.0.0.0 mediatrackbg.com
 0.0.0.0 onlineads.bg
-0.0.0.0 onlineadsbulgaria.bg
 0.0.0.0 onlineadsbulgaria.bg
 0.0.0.0 onlinebgads.bg
 0.0.0.0 reklama.bgnetwork.bg
@@ -220,7 +218,6 @@ lekar.bg
 linker.bg
 lumupu.xyz
 lupa.bg
-lupa.bg
 maritime.bg
 mediapool.bg
 mirogled.com
@@ -286,3 +283,58 @@ zara-live.com
 zdrave.net
 zegrumse.net
 zetsr.com
+0.0.0.0 ad.bgtracker.bg
+0.0.0.0 analytics-bg.com
+0.0.0.0 banneradsbg.com
+0.0.0.0 bultrack.bg
+0.0.0.0 campaignbg.bg
+0.0.0.0 click.bgads.bg
+0.0.0.0 clicktrackingbg.bg
+0.0.0.0 dspbulgaria.bg
+0.0.0.0 marketingbg.bg
+0.0.0.0 onlineadsbg.bg
+0.0.0.0 promo.bgads.com
+0.0.0.0 reklamatargetbg.bg
+0.0.0.0 tracking.bgads.com
+0.0.0.0 usertrack.bg
+0.0.0.0 adbul.bgnetwork.bg
+0.0.0.0 advtrackbg.bg
+0.0.0.0 bulgarianads.bg
+0.0.0.0 bgmarketingads.bg
+0.0.0.0 bgpromos.bg
+0.0.0.0 reklamatargeting.bg
+0.0.0.0 trackingadsbg.bg
+0.0.0.0 markettrackerbg.bg
+0.0.0.0 mediaadtrack.bg
+0.0.0.0 analyticsreklama.bg
+0.0.0.0 adtracknetwork.bg
+0.0.0.0 mediareklamanet.bg
+0.0.0.0 bgtrackad.bg
+0.0.0.0 reklamanetbg.bg
+0.0.0.0 bulgarianreklama.bg
+0.0.0.0 bgreklamtrack.bg
+0.0.0.0 reklamasolutions.bg
+0.0.0.0 adtrackersbg.bg
+0.0.0.0 buladsbg.bg
+0.0.0.0 targetadsbulgaria.bg
+0.0.0.0 banneradsbulgaria.bg
+0.0.0.0 bgwebads.bg
+0.0.0.0 trackbgads.bg
+0.0.0.0 trackingbgnetwork.bg
+0.0.0.0 buladspromo.bg
+0.0.0.0 bulmarketing.bg
+0.0.0.0 marketadsbg.bg
+0.0.0.0 onlineadstrack.bg
+0.0.0.0 reklamacloud.bg
+0.0.0.0 bgreklamcloud.bg
+0.0.0.0 adsanalytics.bg
+0.0.0.0 bultracknetwork.bg
+0.0.0.0 analyticsbgtrack.bg
+0.0.0.0 marketreklama.bg
+0.0.0.0 targetreklama.bg
+0.0.0.0 onlinebgtrack.bg
+0.0.0.0 adscloudbulgaria.bg
+0.0.0.0 adservertrack.bg
+0.0.0.0 trackadserver.bg
+0.0.0.0 analyticsad.bg
+0.0.0.0 reklamanetworkbulgaria.bg
