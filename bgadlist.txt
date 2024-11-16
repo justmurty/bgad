@@ -338,3 +338,5 @@ zetsr.com
 0.0.0.0 trackadserver.bg
 0.0.0.0 analyticsad.bg
 0.0.0.0 reklamanetworkbulgaria.bg
+advertere.zamunda.net
+ads.garga.biz
